@@ -1,0 +1,204 @@
+:root {
+  --bg-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --nav-bg: rgba(255, 255, 255, 0.1);
+  --text-color: white;
+  --nav-link-bg: #091540;
+  --nav-link-hover-bg: hsl(3, 86%, 64%);
+  --card-border: #ccc;
+  --header-color: white;
+  --nav-link-color: white;
+  --slider-color: rgba(255, 255, 255, 0.1);
+  --logo-text: white;
+  
+}
+body.lightmode{
+  --bg-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --nav-bg: hsl(200, 60%, 99%);
+  --text-color: hsl(226, 11%, 37%);
+  --nav-link-bg: white;
+  --nav-link-hover-bg: hsl(3, 86%, 64%);
+  --card-border: #ccc;
+  --header-color: #091540;
+  --nav-link-color: #091540;
+  --slider-color: #ccc;
+  --logo-text: #091540;
+
+}
+
+body{
+    background-image: var(--bg-gradient);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ svg path .customClass{
+   fill: var(--logo-text)
+}
+h3{
+    color: var(--header-color);
+}
+
+/* body .lightmode{
+    background-image: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+} */
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.lightmode #theme-switch svg:first-child{
+    display: none
+}
+.lightmode #theme-switch svg:last-child{
+    display: block;
+}
+.nav{
+    background-color: var(--nav-bg);
+    padding: 1%;
+    margin: 7% 7% 2%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section{
+    padding: 1%;
+    margin: 0 7%;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subsection{
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--nav-link-color);
+    display: inline-block;
+    background-color: var(--nav-link-bg);
+    padding: 10px 20px;
+    border-radius: 40%;
+    box-shadow: 0 0 2px 2px rgb(230, 230, 230);
+    transition: background-color 0.3s ease;
+
+}
+
+.nav-link:hover{
+    background-color: var(--nav-link-hover-bg);
+    color:#091540;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+    margin-left: 7%;
+}
+
+.card{
+    max-width: 350px;
+    background-color: var(--nav-bg);
+    color: var(--text-color);
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+
+
+    
+}
+
+.card-inner{
+    display: flex;
+    align-items: flex-start;
+}
+
+.icon{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.card-content h3,
+.card-content p {
+  margin: 0 0 5px;
+} 
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    left: 70px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--slider-color);
+    transition: .4s;
+    border-radius: 34px;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--text-color);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider{
+    background-color: var(--nav-link-hover-bg);
+}
+
+input:focus + .slider{
+    box-shadow: 0 0 1px var(--nav-link-hover-bg);
+}
+
+input:checked + .slider::before{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px)
+}
+
+.slider .round{
+    border-radius: 34px;
+}
+
+.slider .round::before{
+    border-radius: 50%;
+}
+
+
+
+
