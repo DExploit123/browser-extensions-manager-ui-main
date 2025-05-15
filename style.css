@@ -9,6 +9,7 @@
   --nav-link-color: white;
   --slider-color: rgba(255, 255, 255, 0.1);
   --logo-text: white;
+  --nav-link-box-shadow: 0 0 0.5px 0.5px rgb(255, 255, 255);
   
 }
 body.lightmode{
@@ -22,6 +23,7 @@ body.lightmode{
   --nav-link-color: #091540;
   --slider-color: #ccc;
   --logo-text: #091540;
+  --nav-link-box-shadow: 0 0 2px 2px rgb(230, 230, 230);
 
 }
 
@@ -40,16 +42,10 @@ body{
     justify-content: center;
     align-items: center;
 }
- svg path .customClass{
-   fill: var(--logo-text)
-}
+ 
 h3{
     color: var(--header-color);
 }
-
-/* body .lightmode{
-    background-image: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
-} */
 
 #theme-switch svg:last-child{
     display: none;
@@ -91,7 +87,7 @@ h3{
     background-color: var(--nav-link-bg);
     padding: 10px 20px;
     border-radius: 40%;
-    box-shadow: 0 0 2px 2px rgb(230, 230, 230);
+    box-shadow: var(--nav-link-box-shadow);
     transition: background-color 0.3s ease;
 
 }
@@ -199,6 +195,20 @@ input:checked + .slider::before{
     border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+    .card-container{
+        justify-content: center;
+    
+    }
+}
+
+@media (max-width: 600px){
+    .section{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+}
 
 
 
