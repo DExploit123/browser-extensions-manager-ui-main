@@ -87,12 +87,11 @@ h3{
     background-color: var(--nav-link-bg);
     padding: 10px 20px;
     border-radius: 40%;
-    box-shadow: var(--nav-link-box-shadow);
     transition: background-color 0.3s ease;
 
 }
 
-.nav-link:hover{
+.nav-link:hover, .remove-btn:hover{
     background-color: var(--nav-link-hover-bg);
     color:#091540;
 }
@@ -117,6 +116,24 @@ h3{
 
     
 }
+
+.remove-btn {
+  background-color: var(--nav-link-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px; 
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  box-shadow: var(--nav-link-box-shadow);
+
+}
+
+.remove-btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
 
 .card-inner{
     display: flex;

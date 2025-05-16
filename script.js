@@ -30,7 +30,7 @@ cardData.forEach(data => {
       <div class="card-content">
         <h3>${data.title}</h3>
         <p>${data.description}</p><br><br>
-        <a href='#' class='nav-link'>Remove</a>
+        <button class='remove-btn'>Remove</button>
         <label class= 'switch'>
           <input type= 'checkbox'>
           <span class = 'slider round'></span>
@@ -60,7 +60,7 @@ function renderCards(filter = 'all'){
       <div class="card-content">
         <h3>${card.title}</h3>
         <p>${card.description}</p><br><br>
-        <a href='#' class='nav-link'>Remove</a>
+        <button type='button' class='remove-btn'>Remove</button>
         <label class= 'switch'>
           <input type= 'checkbox'>
           <span class = 'slider round'></span>
